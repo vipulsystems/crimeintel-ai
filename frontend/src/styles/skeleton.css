@@ -1,0 +1,43 @@
+/* skeleton.css */
+.skeleton-card {
+  @apply bg-darkCard border border-white/5 rounded-xl p-4 overflow-hidden relative;
+  background-image: 
+    linear-gradient(var(--gridLine) 1px, transparent 1px),
+    linear-gradient(90deg, var(--gridLine) 1px, transparent 1px);
+  background-size: 20px 20px; /* Subtle architectural grid background */
+}
+
+.shimmer {
+  @apply relative overflow-hidden bg-slate-800/50;
+}
+
+/* The "Laser Scan" Animation */
+.shimmer::after {
+  content: "";
+  @apply absolute inset-0;
+  background: linear-gradient(
+    to bottom,
+    transparent 0%,
+    rgba(0, 245, 255, 0.2) 50%, 
+    transparent 100%
+  );
+  animation: scan-vertical 1.5s infinite linear;
+  height: 20%; /* Narrower scan beam */
+}
+
+@keyframes scan-vertical {
+  0% { transform: translateY(-100%); }
+  100% { transform: translateY(500%); }
+}
+
+.skeleton-img {
+  @apply w-full h-40 rounded-lg mb-4;
+}
+
+.skeleton-text {
+  @apply h-4 w-3/4 rounded-md mb-2;
+}
+
+.skeleton-text.small {
+  @apply w-1/2 h-3 opacity-50;
+}

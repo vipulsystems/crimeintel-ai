@@ -1,0 +1,338 @@
+/* ================================
+   ROOT
+================================ */
+.login-root {
+  width: 100%;
+  min-height: 100vh;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: radial-gradient(circle at top, #0f172a, #020617 60%);
+  position: relative;
+}
+
+/* ================================
+   BACKGROUND
+================================ */
+.bg-grid {
+  position: absolute;
+  inset: 0;
+  background-image:
+    linear-gradient(to right, rgba(56,189,248,0.12) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(56,189,248,0.12) 1px, transparent 1px);
+  background-size: 80px 80px;
+}
+
+.bg-map {
+  position: absolute;
+  inset: 0;
+  background-image:
+    radial-gradient(circle at 20% 30%, rgba(34,211,238,0.2), transparent 50%),
+    radial-gradient(circle at 80% 70%, rgba(59,130,246,0.2), transparent 50%);
+}
+
+/* MATRIX EFFECT */
+.matrix-rain {
+  position: absolute;
+  inset: 0;
+  background: repeating-linear-gradient(
+    to bottom,
+    rgba(34,197,94,0.15),
+    transparent 3px
+  );
+  animation: fall 1.2s linear infinite;
+  opacity: 0.18;
+}
+
+@keyframes fall {
+  from { background-position-y: 0; }
+  to { background-position-y: 20px; }
+}
+
+/* ================================
+   CARD
+================================ */
+/* GLASS EFFECT */
+.login-card {
+  width: 480px;
+  padding: 40px;
+  border-radius: 20px;
+
+  background: rgba(15, 23, 42, 0.45);   /* semi transparent */
+  backdrop-filter: blur(20px);         /* blur matrix behind */
+
+  border: 1px solid rgba(56,189,248,0.25);
+
+  box-shadow:
+    0 20px 60px rgba(0,0,0,0.6);
+
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+  text-align: center;
+}
+
+/* ================================
+   BRAND
+================================ */
+.brand {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+}
+
+/* ================================
+   POLICE AVATAR (PURE CSS)
+================================ */
+
+.police-avatar {
+  position: relative;
+  width: 70px;
+  height: 70px;
+}
+
+/* FACE */
+.face {
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(circle at 50% 40%, #1e293b, #020617);
+  border-radius: 50%;
+  border: 2px solid rgba(34,211,238,0.5);
+  box-shadow: 0 0 10px rgba(34,211,238,0.4);
+}
+
+/* CAP */
+.cap {
+  position: absolute;
+  top: -10px;
+  left: 10%;
+  width: 80%;
+  height: 20px;
+  background: linear-gradient(90deg, #1d4ed8, #22d3ee);
+  border-radius: 10px 10px 0 0;
+  box-shadow: 0 0 10px rgba(34,211,238,0.5);
+}
+
+/* BADGE */
+.badge {
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 12px;
+  height: 12px;
+  background: #22c55e;
+  border-radius: 50%;
+  box-shadow: 0 0 10px #22c55e;
+}
+
+@keyframes rotateRing {
+  to { transform: rotate(360deg); }
+}
+
+/* TEXT */
+.title {
+  font-size: 26px;
+  letter-spacing: 5px;
+  font-weight: 900;
+  color: #22d3ee;
+}
+
+.subtitle {
+  font-size: 12px;
+  letter-spacing: 2px;
+  color: #94a3b8;
+}
+
+.typed {
+  font-size: 13px;
+  letter-spacing: 1px;
+  color: #22c55e;
+}
+
+/* ================================
+   FORM
+================================ */
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* INPUT */
+.input-wrap {
+  position: relative;
+}
+.login-card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  border: 1px solid rgba(34,211,238,0.2);
+  pointer-events: none;
+}
+
+.input-wrap input {
+  width: 100%;
+  padding: 18px;
+  border-radius: 18px;
+  border: 1px solid #334155;
+  background: #020617;
+  color: white;
+  font-size: 1rem;
+  transition: all 0.25s ease;
+}
+
+/* INPUT EFFECT */
+.input-wrap input:hover {
+  border-color: #22d3ee;
+}
+
+.input-wrap input:focus {
+  border-color: #22d3ee;
+  box-shadow:
+    0 0 0 2px rgba(34,211,238,0.2),
+    0 0 20px rgba(34,211,238,0.6);
+  transform: scale(1.03);
+}
+
+/* EYE ICON */
+.eye {
+  position: absolute;
+  right: 14px;
+  top: 14px;
+  cursor: pointer;
+}
+.matrix-canvas {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  opacity: 0.35;
+  pointer-events: none;
+}
+/* ================================
+   BUTTON
+================================ */
+.login-btn {
+  padding: 18px;
+  border-radius: 16px;
+  border: none;
+  background: linear-gradient(135deg,#22d3ee,#3b82f6);
+  color: black;
+  font-weight: 700;
+  letter-spacing: 0.2em;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.25s ease;
+}
+
+/* BUTTON GLOW */
+.login-btn:hover {
+  transform: scale(1.02);
+  box-shadow: none;
+}
+
+.login-btn span {
+  position: relative;
+  z-index: 2;
+}
+
+/* Animated border line */
+.login-btn::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  padding: 1px;
+  background: linear-gradient(
+    120deg,
+    transparent,
+    #22d3ee,
+    transparent
+  );
+  -webkit-mask:
+    linear-gradient(#000 0 0) content-box,
+    linear-gradient(#000 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  animation: borderMove 2s linear infinite;
+}
+
+/* scanning line inside button */
+.login-btn::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: rgba(34,211,238,0.7);
+  animation: scanLine 2s infinite;
+}
+
+@keyframes scanLine {
+  0% { top: 0%; opacity: 0; }
+  50% { opacity: 1; }
+  100% { top: 100%; opacity: 0; }
+}
+
+/* Animation */
+@keyframes borderMove {
+  0% { background-position: 0% 50%; }
+  100% { background-position: 200% 50%; }
+}
+
+/* RADAR EFFECT */
+.btn-radar {
+  position: absolute;
+  inset: 0;
+  border-radius: 50%;
+  border: 1px solid rgba(34,211,238,0.3);
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  from { transform: scale(0.5); opacity: 0.7; }
+  to { transform: scale(1.5); opacity: 0; }
+}
+
+/* ================================
+   ERROR
+================================ */
+.error {
+  background: rgba(248,113,113,0.1);
+  border: 1px solid #f87171;
+  padding: 10px;
+  border-radius: 10px;
+}
+
+/* ================================
+   LOADER
+================================ */
+.loader {
+  text-align: center;
+}
+
+.ring {
+  width: 60px;
+  height: 60px;
+  border: 3px solid #22d3ee;
+  border-top: 3px solid transparent;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+  margin: auto;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+/* ================================
+   FOOTER
+================================ */
+.footer {
+  font-size: 11px;
+  color: #64748b;
+}

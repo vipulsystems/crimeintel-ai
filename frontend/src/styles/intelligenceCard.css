@@ -1,0 +1,283 @@
+/* =========================================
+   CARD ROOT
+========================================= */
+.card {
+  position: relative;
+  height: 100%;
+
+  background: linear-gradient(
+    145deg,
+    rgba(10,15,25,0.85),
+    rgba(5,10,20,0.9)
+  );
+  backdrop-filter: blur(12px);
+
+  border-radius: 14px;
+  border: 1px solid rgba(59,130,246,0.15);
+
+  overflow: hidden;
+
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+
+  cursor: pointer;
+  transition: all 0.25s ease;
+}
+
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow:
+    0 0 25px rgba(34,211,238,0.2),
+    0 0 60px rgba(34,211,238,0.1);
+}
+
+/* =========================================
+   SEVERITY LINE
+========================================= */
+.card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  height: 3px;
+  width: 100%;
+}
+
+.card.high::before { background: #ef4444; }
+.card.medium::before { background: #f59e0b; }
+.card.low::before { background: #22c55e; }
+
+/* =========================================
+   IMAGE
+========================================= */
+.card-img-wrapper {
+  width: 100%;
+  height: 0;
+  padding-bottom: 58%;
+  position: relative;
+  background: #06121f;
+}
+
+.card-img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.4s ease;
+}
+
+.card:hover .card-img {
+  transform: scale(1.05);
+}
+
+/* =========================================
+   OVERLAY
+========================================= */
+.card-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to top,
+    rgba(0,0,0,0.8),
+    rgba(0,0,0,0.2),
+    transparent
+  );
+}
+
+/* =========================================
+   TOP BAR
+========================================= */
+.card-topbar {
+  position: absolute;
+  top: 8px;
+  left: 10px;
+  right: 10px;
+
+  display: flex;
+  justify-content: space-between;
+
+  z-index: 2;
+}
+
+.severity-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+}
+
+.severity-dot.high {
+  background: #ef4444;
+  box-shadow: 0 0 10px rgba(239,68,68,0.8);
+}
+
+.severity-dot.medium { background: #f59e0b; }
+.severity-dot.low { background: #22c55e; }
+
+.card-source {
+  font-size: 10px;
+  color: #9fb3c8;
+  text-transform: uppercase;
+}
+
+/* =========================================
+   TITLE (STABILIZED HEIGHT)
+========================================= */
+.card-title {
+  font-size: 13.5px;
+  font-weight: 600;
+  color: #e6f0ff;
+
+  padding: 0 14px;
+  line-height: 1.4;
+
+  min-height: 38px;
+
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  overflow: hidden;
+}
+
+/* =========================================
+   AI BLOCK
+========================================= */
+.card-ai {
+  padding: 10px 14px;
+  border-top: 1px solid rgba(34,197,94,0.12);
+
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+/* TOP ROW */
+.ai-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* RISK */
+.ai-risk {
+  font-size: 10px;
+  font-weight: 600;
+  padding: 2px 6px;
+  border-radius: 4px;
+}
+
+.ai-risk.high {
+  background: rgba(239,68,68,0.2);
+  color: #ef4444;
+}
+
+.ai-risk.medium {
+  background: rgba(245,158,11,0.2);
+  color: #f59e0b;
+}
+
+.ai-risk.low {
+  background: rgba(34,197,94,0.2);
+  color: #22c55e;
+}
+
+/* CONFIDENCE */
+.ai-confidence {
+  font-size: 10px;
+  color: #94a3b8;
+}
+
+/* INSIGHT */
+.ai-insight {
+  font-size: 11.5px;
+  color: #e2e8f0;
+  line-height: 1.4;
+
+  min-height: 32px;
+
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  overflow: hidden;
+}
+
+/* ACTION */
+.ai-action {
+  font-size: 11px;
+  color: #22c55e;
+  opacity: 0.85;
+
+  min-height: 18px;
+}
+
+/* SEVERITY INFLUENCE */
+.card.high .card-ai {
+  border-top: 1px solid rgba(239,68,68,0.2);
+}
+
+.card.medium .card-ai {
+  border-top: 1px solid rgba(245,158,11,0.2);
+}
+
+/* =========================================
+   META
+========================================= */
+.card-meta {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 14px;
+
+  font-size: 11px;
+  color: #94a3b8;
+}
+
+/* =========================================
+   TAGS
+========================================= */
+.card-tags {
+  display: flex;
+  gap: 6px;
+  padding: 0 14px;
+}
+
+.tag {
+  padding: 4px 8px;
+  font-size: 10px;
+  border-radius: 999px;
+}
+
+.tag.crime {
+  background: rgba(34,211,238,0.2);
+  color: #22d3ee;
+}
+
+.tag.source {
+  background: rgba(251,191,36,0.2);
+  color: #fbbf24;
+}
+
+/* =========================================
+   ACTIONS (LOCKED TO BOTTOM)
+========================================= */
+.card-actions {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  padding: 0 14px 12px;
+
+  margin-top: auto;
+}
+
+.card-source-link {
+  color: #52c6ff;
+  font-size: 12px;
+}
+
+.card-bookmark {
+  background: transparent;
+  border: none;
+  color: #d6e9ff;
+}
+
+.card-bookmark .active {
+  color: #ffd56b;
+}

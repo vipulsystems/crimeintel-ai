@@ -1,0 +1,147 @@
+.au-wrapper {
+  padding: 24px;
+  color: #e6f0ff;
+}
+
+/* HEADER */
+.au-header {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 16px;
+}
+
+.au-title {
+  font-size: 20px;
+  font-weight: 700;
+  color: #38bdf8;
+}
+
+.au-sub {
+  font-size: 12px;
+  color: #94a3b8;
+}
+
+/* BUTTONS */
+.au-btn {
+  padding: 8px 12px;
+  border-radius: 8px;
+  background: rgba(56,189,248,0.15);
+  border: 1px solid rgba(56,189,248,0.4);
+  color: #38bdf8;
+  cursor: pointer;
+}
+
+.au-icon-btn {
+  padding: 8px;
+  border-radius: 8px;
+  border: 1px solid rgba(56,189,248,0.3);
+  background: transparent;
+}
+
+/* FILTER */
+.au-filters {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 16px;
+}
+
+.au-filter-input,
+.au-filter-select {
+  padding: 8px;
+  border-radius: 8px;
+  background: #020617;
+  border: 1px solid rgba(56,189,248,0.2);
+  color: white;
+}
+
+/* TABLE */
+.au-table-wrap {
+  border: 1px solid rgba(56,189,248,0.2);
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.au-table {
+  width: 100%;
+}
+
+.au-table th {
+  background: rgba(56,189,248,0.1);
+  padding: 10px;
+}
+
+.au-table td {
+  padding: 10px;
+}
+
+/* USER */
+.au-user-cell {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+.au-avatar {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background: #38bdf8;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* ROLE */
+.au-role {
+  padding: 4px 8px;
+  border-radius: 6px;
+}
+
+.au-role-admin {
+  background: rgba(56,189,248,0.2);
+}
+
+/* STATUS */
+.au-status-active {
+  color: #22c55e;
+}
+
+.au-status-inactive {
+  color: #ef4444;
+}
+
+/* ACTIONS */
+.au-actions-col {
+  display: flex;
+  gap: 6px;
+}
+
+/* MODAL */
+.au-modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.au-modal {
+  background: #020617;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+/* DRAWER */
+.au-drawer-overlay {
+  position: fixed;
+  inset: 0;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.au-drawer {
+  width: 300px;
+  background: #020617;
+  padding: 16px;
+}

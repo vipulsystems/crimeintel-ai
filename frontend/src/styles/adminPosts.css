@@ -1,0 +1,240 @@
+/* =========================================
+   WRAPPER
+========================================= */
+.admin-evidence-wrapper {
+  padding: 20px 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+/* =========================================
+   HEADER
+========================================= */
+.admin-evidence-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.admin-evidence-title {
+  font-size: 14px;
+  letter-spacing: 2px;
+  color: #22d3ee;
+}
+
+.admin-evidence-sub {
+  font-size: 11px;
+  color: #64748b;
+  margin-top: 2px;
+}
+
+/* STATS */
+.admin-evidence-stats {
+  display: flex;
+  gap: 8px;
+}
+
+.admin-chip {
+  font-size: 11px;
+  padding: 4px 8px;
+  border-radius: 6px;
+
+  background: rgba(34,211,238,0.1);
+  border: 1px solid rgba(34,211,238,0.2);
+
+  color: #22d3ee;
+}
+
+/* =========================================
+   TABLE WRAP
+========================================= */
+.admin-evidence-table-wrap {
+  border-radius: 12px;
+  overflow: hidden;
+
+  border: 1px solid rgba(59,130,246,0.15);
+  background: rgba(10,15,25,0.7);
+  backdrop-filter: blur(10px);
+}
+
+/* =========================================
+   TABLE
+========================================= */
+.admin-evidence-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 12px;
+}
+
+/* HEADER */
+.admin-evidence-table thead {
+  background: rgba(15,23,42,0.9);
+}
+
+.admin-evidence-table th {
+  text-align: left;
+  padding: 10px 12px;
+  font-weight: 600;
+  color: #94a3b8;
+  border-bottom: 1px solid rgba(59,130,246,0.15);
+}
+
+/* =========================================
+   ROW
+========================================= */
+.admin-evidence-row {
+  transition: all 0.2s ease;
+  cursor: pointer;
+}
+
+.admin-evidence-row td {
+  padding: 10px 12px;
+  color: #e2e8f0;
+  border-bottom: 1px solid rgba(59,130,246,0.08);
+}
+
+/* HOVER */
+.admin-evidence-row:hover {
+  background: rgba(34,211,238,0.05);
+  transform: scale(1.01);
+}
+
+/* =========================================
+   SEVERITY (VERY IMPORTANT)
+========================================= */
+.admin-evidence-row.high {
+  border-left: 3px solid #ef4444;
+}
+
+.admin-evidence-row.medium {
+  border-left: 3px solid #f59e0b;
+}
+
+.admin-evidence-row.low {
+  border-left: 3px solid #22c55e;
+}
+
+/* FLAGGED */
+.admin-evidence-row.flagged {
+  background: rgba(239,68,68,0.05);
+}
+
+/* =========================================
+   TEXT COLUMN
+========================================= */
+.admin-evidence-text {
+  max-width: 360px;
+  line-height: 1.4;
+
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  overflow: hidden;
+}
+
+/* =========================================
+   KEYWORDS
+========================================= */
+.admin-evidence-keywords {
+  max-width: 220px;
+  color: #94a3b8;
+  font-size: 11px;
+}
+
+/* =========================================
+   ACTIONS
+========================================= */
+.admin-actions {
+  display: flex;
+  gap: 6px;
+}
+
+/* BUTTON SYSTEM */
+.admin-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+
+  padding: 5px 8px;
+  border-radius: 6px;
+
+  font-size: 11px;
+
+  background: rgba(34,211,238,0.1);
+  border: 1px solid rgba(34,211,238,0.3);
+
+  color: #22d3ee;
+
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.admin-btn:hover {
+  background: rgba(34,211,238,0.2);
+}
+
+/* DANGER BUTTON */
+.admin-btn.danger {
+  background: rgba(239,68,68,0.15);
+  border: 1px solid rgba(239,68,68,0.3);
+  color: #ef4444;
+}
+
+.admin-btn.danger:hover {
+  background: rgba(239,68,68,0.25);
+}
+
+/* =========================================
+   EMPTY STATE
+========================================= */
+.empty-row {
+  text-align: center;
+  padding: 20px;
+  color: #64748b;
+}
+
+/* =========================================
+   PAGINATION
+========================================= */
+.admin-evidence-pagination {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+}
+
+.page-pill {
+  padding: 6px 10px;
+  border-radius: 6px;
+
+  background: rgba(10,15,25,0.6);
+  border: 1px solid rgba(59,130,246,0.2);
+
+  color: #cbd5f5;
+  font-size: 12px;
+
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.page-pill:hover {
+  background: rgba(34,211,238,0.2);
+  color: #22d3ee;
+}
+
+.page-pill.active {
+  background: rgba(34,211,238,0.25);
+  color: #22d3ee;
+}
+
+/* =========================================
+   RESPONSIVE
+========================================= */
+@media (max-width: 900px) {
+  .admin-evidence-wrapper {
+    padding: 16px;
+  }
+
+  .admin-evidence-text {
+    max-width: 220px;
+  }
+}

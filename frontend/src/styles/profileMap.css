@@ -1,0 +1,45 @@
+.profile-map-card {
+  margin-top: 22px;
+  background: rgba(8, 20, 38, 0.75);
+  border: 1px solid rgba(56, 189, 248, 0.35);
+  border-radius: 14px;
+  padding: 14px 18px;
+  backdrop-filter: blur(8px);
+  box-shadow: 0 0 25px rgba(0, 255, 255, 0.15);
+}
+
+.profile-map-title {
+  font-size: 1.05rem;
+  color: #38bdf8;
+  font-weight: 700;
+  margin-bottom: 4px;
+}
+
+.profile-map-sub {
+  font-size: 0.82rem;
+  color: #94a3b8;
+  margin-bottom: 10px;
+}
+
+.profile-map {
+  width: 100%;
+  height: 310px;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+/* neon glowing markers */
+.neon-marker .pulse-dot {
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background: #00eaff;
+  box-shadow: 0 0 18px #00eaff, 0 0 28px #00eaff;
+  animation: pulse 1.8s infinite ease-in-out;
+}
+
+@keyframes pulse {
+  0% { transform: scale(0.8); opacity: 0.7; }
+  50% { transform: scale(1.4); opacity: 1; }
+  100% { transform: scale(0.8); opacity: 0.7; }
+}

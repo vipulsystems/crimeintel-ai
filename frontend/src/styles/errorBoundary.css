@@ -1,0 +1,113 @@
+/* =========================================
+   FULL SCREEN
+========================================= */
+.error-screen {
+  position: fixed;
+  inset: 0;
+
+  background: radial-gradient(
+    circle at center,
+    rgba(10,15,25,0.9),
+    rgba(0,0,0,0.98)
+  );
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  z-index: 99999;
+}
+
+/* =========================================
+   ERROR BOX
+========================================= */
+.error-box {
+  width: 420px;
+  max-width: 90%;
+
+  padding: 24px;
+
+  border-radius: 14px;
+
+  background: linear-gradient(
+    145deg,
+    rgba(20,10,10,0.9),
+    rgba(10,5,5,0.95)
+  );
+
+  border: 1px solid rgba(239,68,68,0.25);
+
+  box-shadow:
+    0 0 40px rgba(239,68,68,0.15),
+    0 0 80px rgba(239,68,68,0.05);
+
+  text-align: center;
+}
+
+/* =========================================
+   STATUS LABEL
+========================================= */
+.error-code {
+  font-size: 11px;
+  letter-spacing: 2px;
+  color: #ef4444;
+  margin-bottom: 10px;
+}
+
+/* =========================================
+   TITLE
+========================================= */
+.error-title {
+  font-size: 18px;
+  color: #f87171;
+  margin-bottom: 10px;
+}
+
+/* =========================================
+   DESCRIPTION
+========================================= */
+.error-desc {
+  font-size: 13px;
+  color: #fca5a5;
+  line-height: 1.5;
+  margin-bottom: 16px;
+}
+
+/* =========================================
+   DEBUG BLOCK
+========================================= */
+.error-debug {
+  background: rgba(0,0,0,0.6);
+  border-radius: 6px;
+  padding: 10px;
+
+  font-size: 11px;
+  color: #fca5a5;
+
+  max-height: 150px;
+  overflow: auto;
+
+  margin-bottom: 14px;
+}
+
+/* =========================================
+   BUTTON
+========================================= */
+.error-btn {
+  padding: 8px 16px;
+
+  border-radius: 8px;
+
+  background: rgba(239,68,68,0.2);
+  border: 1px solid rgba(239,68,68,0.4);
+
+  color: #ef4444;
+  font-size: 12px;
+
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.error-btn:hover {
+  background: rgba(239,68,68,0.3);
+}

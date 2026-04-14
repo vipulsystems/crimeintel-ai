@@ -1,0 +1,217 @@
+/* =====================================
+   SIDEBAR BASE
+===================================== */
+.ss-sidebar {
+  width: 240px;
+  height: 100vh;
+  position: fixed;
+  left: 0;
+  top: 0;
+
+  background: rgba(2, 6, 23, 0.92);
+  backdrop-filter: blur(16px);
+
+  border-right: 1px solid rgba(56, 189, 248, 0.15);
+
+  transition: width 0.3s ease;
+  z-index: 50;
+}
+
+.ss-sidebar.collapsed {
+  width: 72px;
+}
+
+/* =====================================
+   INNER
+===================================== */
+.ss-sidebar-inner {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+/* =====================================
+   HEADER / HAMBURGER
+===================================== */
+.ss-badge {
+  height: 70px;
+  display: flex;
+  align-items: center;
+  padding: 0 16px;
+}
+
+.ss-sidebar-hamburger {
+  background: transparent;
+  border: none;
+  color: #22d3ee;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.ss-sidebar-hamburger:hover {
+  transform: scale(1.1);
+}
+
+/* =====================================
+   NAV
+===================================== */
+.ss-nav {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  padding: 10px;
+}
+
+/* SECTION TITLE */
+.ss-nav-section {
+  font-size: 10px;
+  color: #64748b;
+  margin: 10px 10px 4px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+/* NAV ITEM */
+.ss-nav-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+
+  padding: 10px 12px;
+  border-radius: 10px;
+
+  color: #94a3b8;
+  text-decoration: none;
+
+  position: relative;
+  transition: all 0.2s ease;
+}
+
+/* ICON */
+.ss-nav-icon {
+  width: 18px;
+  height: 18px;
+  flex-shrink: 0;
+}
+
+/* HOVER */
+.ss-nav-item:hover {
+  background: rgba(34, 211, 238, 0.08);
+  color: #22d3ee;
+}
+
+/* ACTIVE */
+.ss-nav-item.active {
+  background: rgba(34, 211, 238, 0.12);
+  color: #22d3ee;
+}
+
+.ss-nav-item.active::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 20%;
+  height: 60%;
+  width: 3px;
+  background: #22d3ee;
+  border-radius: 2px;
+}
+
+/* =====================================
+   COLLAPSED MODE
+===================================== */
+
+/* Hide text */
+.ss-sidebar.collapsed .ss-nav-text {
+  display: none;
+}
+
+/* Center icons */
+.ss-sidebar.collapsed .ss-nav-item {
+  justify-content: center;
+}
+
+/* =====================================
+   TOOLTIP (IMPORTANT 🔥)
+===================================== */
+
+.ss-sidebar.collapsed .ss-nav-item {
+  position: relative;
+}
+
+.ss-sidebar.collapsed .ss-nav-item::after {
+  content: attr(data-label);
+  position: absolute;
+  left: 60px;
+  top: 50%;
+  transform: translateY(-50%);
+
+  background: #020617;
+  color: #e2e8f0;
+  font-size: 11px;
+  padding: 6px 10px;
+  border-radius: 6px;
+
+  white-space: nowrap;
+  opacity: 0;
+  pointer-events: none;
+
+  border: 1px solid rgba(56, 189, 248, 0.2);
+
+  transition: 0.2s;
+}
+
+.ss-sidebar.collapsed .ss-nav-item:hover::after {
+  opacity: 1;
+  left: 70px;
+}
+
+/* =====================================
+   FOOTER
+===================================== */
+.ss-sidebar-footer {
+  padding: 12px;
+}
+
+/* LOGOUT */
+.ss-logout {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+
+  padding: 10px;
+  border-radius: 10px;
+
+  background: transparent;
+  border: 1px solid rgba(248, 113, 113, 0.3);
+  color: #f87171;
+
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.ss-logout:hover {
+  background: rgba(248, 113, 113, 0.1);
+}
+
+.ss-sidebar.collapsed .ss-logout span {
+  display: none;
+}
+
+.ss-sidebar.collapsed .ss-logout {
+  justify-content: center;
+}
+
+/* =====================================
+   SCROLLBAR (OPTIONAL NICE TOUCH)
+===================================== */
+.ss-nav::-webkit-scrollbar {
+  width: 4px;
+}
+
+.ss-nav::-webkit-scrollbar-thumb {
+  background: rgba(56, 189, 248, 0.3);
+  border-radius: 10px;
+}
