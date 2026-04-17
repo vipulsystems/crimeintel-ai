@@ -225,7 +225,7 @@ The project includes exploratory analysis of crime-related datasets to understan
 If you're interested in collaboration, freelance work, or discussing opportunities:
 
 - GitHub: https://github.com/vipultechstack  
-- Email: vipulpaighan@gmail.com  
+- Email: vipulpaighan.1988@gmail.com  
 
 ---
 
