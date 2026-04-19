@@ -1,63 +1,63 @@
-<h1 align="center">🚨 CrimeIntel AI</h1>
+<h1 align="center">CrimeIntel AI</h1>
 
 > Real-time intelligence dashboard for monitoring crime related activity using aggregated data from news and social media sources.
 
 ---
 
-## 🎥 Preview
+## Preview
 
 ![Preview](./screenshots/preview.gif)
 
 ---
 
-## 📸 Screenshots
+## Screenshots
 
-### 🔐 Login
+### Login
 ![Login](./screenshots/login.png)
 
-### 🧑‍💼 Admin Panel
+### Admin Panel
 ![Admin](./screenshots/admin.png)
 
-### 🌐 Intelligence Feed
+### Intelligence Feed
 ![Feed](./screenshots/feed.png)
 
-### 📊 Dashboard
+### Dashboard
 ![Dashboard](./screenshots/dashboard.png)
 
 ---
 
-## 🌐 Live Demo
+## Live Demo
 
 * Frontend: https://your-vercel-link.vercel.app
 * Backend API: https://your-render-link.onrender.com
 
 ---
 
-## ⚡ What is CrimeIntel AI?
+## What is CrimeIntel AI?
 
 CrimeIntel AI is a fullstack intelligence platform that collects and visualizes crime related data from multiple sources including:
 
-* 📰 News scraping
-* 🧵 Reddit discussions
-* 🐦 Twitter posts
-* 📸 Social media content
+* News scraping
+* Reddit discussions
+* Twitter posts
+* Social media content
 
 The system processes this data and presents it through an interactive dashboard with **real-time updates and geospatial visualization**.
 
 ---
 
-## 🔥 Key Highlights
+## Key Highlights
 
-* 📡 Real time alerts using Socket.IO
-* 🗺️ Crime heatmaps with Leaflet
-* 📊 Interactive analytics dashboard
-* 🌐 Multi source data aggregation
-* 🔐 Role-based authentication (Admin / Officer)
-* ⚙️ Modular full-stack architecture
+* Real time alerts using Socket.IO
+* Crime heatmaps with Leaflet
+* Interactive analytics dashboard
+* Multi source data aggregation
+* Role-based authentication (Admin / Officer)
+* Modular full-stack architecture
 
 ---
 
-## 🧱 Tech Stack
+## Tech Stack
 
 ### Frontend
 
@@ -75,7 +75,7 @@ The system processes this data and presents it through an interactive dashboard 
 
 ---
 
-## 📂 Project Structure
+## Project Structure
 
 ```
 crimeintel-ai/
@@ -86,7 +86,7 @@ crimeintel-ai/
 
 ---
 
-## 🚀 Quick Start
+## Quick Start
 
 ```bash
 # Clone repository
@@ -105,11 +105,11 @@ npm run dev
 
 ---
 
-## 🏗️ System Architecture
+## System Architecture
 
 CrimeIntel AI follows a modular full-stack architecture with real-time data flow.
 
-### 🔄 Data Flow
+### Data Flow
 
 ```
 Data Sources (News, Reddit, Twitter, Social Media)
@@ -127,7 +127,7 @@ Frontend Dashboard (React)
 
 ---
 
-### ⚙️ Backend Architecture
+### Backend Architecture
 
 * Modular structure (auth, crime, post, social)
 * Service layer for business logic
@@ -137,7 +137,7 @@ Frontend Dashboard (React)
 
 ---
 
-### 🎨 Frontend Architecture
+### Frontend Architecture
 
 * Feature-based structure (auth, dashboard, intelligence)
 * Shared UI component system
@@ -146,22 +146,22 @@ Frontend Dashboard (React)
 
 ---
 
-## 💡 Why This Project?
+## Why This Project?
 
 Most dashboards only visualize static data.
 
 CrimeIntel AI focuses on:
 
-* 🌐 Aggregating real-time data from multiple sources
-* 📡 Monitoring social signals for crime-related activity
-* 🗺️ Visualizing insights with geospatial context
-* ⚡ Delivering live updates through real-time communication
+* Aggregating real-time data from multiple sources
+* Monitoring social signals for crime-related activity
+* Visualizing insights with geospatial context
+* Delivering live updates through real-time communication
 
 This project is designed to reflect how modern intelligence systems aggregate, process, and visualize real-time data streams.
 
 ---
 
-## 🧠 Challenges & Solutions
+## Challenges & Solutions
 
 ### 1. Handling Multiple Data Sources
 
@@ -191,7 +191,7 @@ This project is designed to reflect how modern intelligence systems aggregate, p
 
 ---
 
-## 📊 Exploratory Data Analysis (EDA)
+## Exploratory Data Analysis (EDA)
 
 The project includes exploratory analysis of crime-related datasets to understand patterns and trends.
 
@@ -201,7 +201,7 @@ The project includes exploratory analysis of crime-related datasets to understan
 
 ---
 
-## 🎯 Use Cases
+## Use Cases
 
 - Law enforcement monitoring and analysis  
 - Social media intelligence tracking  
@@ -210,7 +210,7 @@ The project includes exploratory analysis of crime-related datasets to understan
 
 ---
 
-## 🚀 Future Improvements
+## Future Improvements
 
 * Event-driven architecture using message queues (Redis, BullMQ)
 * NLP-based classification of crime-related content
@@ -220,7 +220,7 @@ The project includes exploratory analysis of crime-related datasets to understan
 
 ---
 
-## 📬 Contact
+## Contact
 
 If you're interested in collaboration, freelance work, or discussing opportunities:
 
