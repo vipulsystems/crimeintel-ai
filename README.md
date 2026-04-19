@@ -229,6 +229,6 @@ If you're interested in collaboration, freelance work, or discussing opportuniti
 
 ---
 
-## ⭐ Support
+## Support
 
 If you found this project useful, consider giving it a star ⭐
