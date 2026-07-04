@@ -161,6 +161,24 @@ This project is designed to reflect how modern intelligence systems aggregate, p
 
 ---
 
+## Optional Xquik Source
+
+The backend Twitter worker can read recent X posts through Xquik instead of
+using the static fallback. Add these variables to `backend/.env`:
+
+```env
+XQUIK_API_KEY=your_xquik_api_key
+XQUIK_API_BASE_URL=https://xquik.com
+XQUIK_SEARCH_QUERY=crime OR police OR robbery OR theft OR accident
+XQUIK_SEARCH_LIMIT=25
+```
+
+When `XQUIK_API_KEY` is present, `fetchTwitterPosts()` calls
+`/api/v1/x/tweets/search`, maps the results into the existing post shape, and
+keeps the dashboard ingestion flow unchanged.
+
+---
+
 ## Challenges & Solutions
 
 ### 1. Handling Multiple Data Sources
