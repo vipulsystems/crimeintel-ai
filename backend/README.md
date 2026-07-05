@@ -65,7 +65,15 @@ Create `.env` file:
 PORT=5000
 MONGO_URI=your_mongodb_uri
 JWT_SECRET=your_secret
+XQUIK_API_KEY=your_xquik_api_key
+XQUIK_API_BASE_URL=https://xquik.com
+XQUIK_SEARCH_QUERY=crime OR police OR robbery OR theft OR accident
+XQUIK_SEARCH_LIMIT=25
 ```
+
+`XQUIK_API_KEY` is optional. When it is configured, the Twitter worker uses
+Xquik's `/api/v1/x/tweets/search` endpoint and maps results into the existing
+post schema.
 
 ---
 
